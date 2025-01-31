@@ -50,12 +50,12 @@ module program_memory
     // Initialize memory contents
     initial begin
 
-        memory[0] = 16'b0000_0001_0000_1000; //MOVI 8 8 -> ACC
-		  memory[1] = 16'b0001_0001_0000_0010; //ADDI 2 ACC = ACC+2
-        memory[2] = 16'b0000_0011_0000_0000; //STORE ACC -> RAM[0]
+        memory[0] = 16'b0000_0001_0000_1000; //MOVI 8, 8 -> ACC
+		  memory[1] = 16'b0001_0001_0000_0010; //ADDI 2, ACC = ACC+2
+        memory[2] = 16'b0000_0011_0000_0000; //STORE, ACC -> RAM[0]
 		  memory[3] = 16'b0000_0110_0000_0001; //MOV R0* -> R1
-		  memory[4] = 16'b0000_0110_0000_0000; //MOV R0* -> REG[0]
-		  memory[5] = 16'b0001_0100_0000_0001; //ADD R0, R1; R2 = R1+R2
+		  memory[4] = 16'b0000_0110_0000_0000; //MOV R0* -> R0
+		  memory[5] = 16'b0001_0100_0000_0001; //ADD R0, R1, R1 = R0+R2
 		  memory[6] = 16'b1011_0100_0001_0001; //Unconditional jump to R1 ROM location, second operand unnecessary
     end
 
